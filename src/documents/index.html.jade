@@ -1,0 +1,116 @@
+- var features = [];
+- features.push({icon:"icon-thumb.png", title:"Short on time and putting all your effort into social media?", description:"Postcard is about helping you seamlessly get content on your own website as well as social networks if you don't have time to do long-form blogging."});
+- features.push({icon:"icon-phone-networks.png", title:"Always posting updates from your mobile phone?", description:"Postcard is built for a companion mobile app integrated with all major social networks.<br /><br />Post once and send content everywhere."});
+- features.push({icon:"icon-hashtag.png", title:"Don't like bloating your updates with hashtags?",description:"Postcard includes private tagging functionality so you can categorize your content without overwhelming the message."});
+- features.push({icon:"icon-magnifying-glass.png", title:"Losing your best updates in an ocean of tweets?",description:"Share your updates to Postcard and search your content later by any parameter.<br /><br />Create filtered feeds and galleries from your content."});
+- features.push({icon:"icon-lightning.png", title:"Not a seasoned<br /> WordPress veteran?",description:"Setup is fast and easy. Just install the plugin, add your website to the app and start posting.<br /><br /> Insert feeds as pages, shortcode embeds or widgets without a single line of code."});
+- features.push({icon:"icon-tools.png", title:"Like to get your hands dirty and want all the details?",description:"The plugin has many customization hooks and the code base is open source. The mobile app implements an open and documented API. Any website that responds to this API can use the app. <a class='blog' target='_blank' href='http://blog.postcardsocial.net'>Read the blog</a> for more info."});
+
+- var mailchip_list_url = "http://postcardsocial.us7.list-manage.com/subscribe/post?u=0867e80f604fbb2b5fc62c88e&amp;id=5c51005cbc";
+
+!!!
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title Postcard - Turn your WordPress website into a private social network or micro-blog
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='styles/style.css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,400',rel='stylesheet',type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700',rel='stylesheet',type='text/css')
+
+    meta(property="og:type", content="website")
+    meta(property="og:url", content="http://www.postcardsocial.net/")
+    meta(property="og:site_name", content="Postcard")
+    meta(property="og:image", content="http://www.postcardsocial.net/img/postcard-icon.png")
+    meta(property="og:title", content="Postcard - A social networking platform for your website")
+    meta(property="og:description", content="Postcard is about helping you seamlessly get content on your own website as well as social networks if you don't have time to do long-form blogging.")
+
+  body
+    header
+      div.container
+        h1
+          span.title Postcard
+          img.title-img(src="images/icon-logo.png")
+        span.beta
+          span.value Coming Soon
+
+        form.notify-small(name="mc-embedded-subscribe-form", action="#{mailchip_list_url}", method="POST")
+          input.email(type="email", name="EMAIL", placeholder="your@email.com")
+          div.beta-opt-in
+            input.beta(type="checkbox", value="yes", name="BETA")
+            label.beta(for="beta")
+              span.value I'm interested
+                br
+                | in beta testing
+          button.submit
+            span.title Notify Me
+    div#main
+      div.showcase
+        div.container
+          p.slogan
+            span.value Turn your WordPress website into a
+              br
+              | personal social network or micro-blog
+
+        img.example-display(src="images/showcase.png")
+      div.features-section
+        div.container
+          ul.features
+            - for (var i = 0; i < 6; ++i) {
+              li.feature
+                div.heading
+                  img.icon(src="images/#{features[i].icon}")
+                  h5.title
+                    span.value!=features[i].title
+                p.description!=features[i].description
+            - }
+      div.coming-soon
+
+        h2
+          span.title Coming soon to a website&nbsp;
+            em.owned owned by you
+
+        h4
+          span.title Sign up to be notified when Postcard is released
+
+        form.notify-big(name="mc-embedded-subscribe-form", action="#{mailchip_list_url}", method="POST")
+          input.email(type="email", name="EMAIL", placeholder="your@email.com")
+          div.beta-opt-in
+            input.beta(type="checkbox", value="yes", name="BETA")
+            label.beta(for="beta")
+              span.value I'm interested
+                br
+                | in beta testing
+          button.submit
+            span.title Notify Me
+
+       div.blog-cta
+        h4.blog
+         span.title
+          a.blog(target="_blank", href="http://blog.postcardsocial.net") Visit the blog
+          | &nbsp;for more info
+          br
+          br
+          | - or -
+          br
+          br
+          | Follow Postcard updates on Twitter
+          br
+          a.twitter-name(target="_blank",href="https://www.twitter.com/postcardsocial") @postcardsocial
+
+    footer
+
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+    script.
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-11047565-14']);
+      _gaq.push(['_setDomainName', 'postcardsocial.net']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();

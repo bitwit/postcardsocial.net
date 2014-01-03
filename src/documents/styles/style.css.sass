@@ -1,0 +1,277 @@
+@import 'compass'
+@import 'compass/reset'
+
+$font-size: 16   // Your base font-size in pixels
+$em: $font-size/1em   // Shorthand for outputting ems
+
++establish-baseline($font-size * 1px)
+
+$orange: #FF9628
+
+html
+  height: 100%
+
+body
+  height: 100%
+  font:
+    family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
+
+h1,h2,h3,h4,h5,h6
+  font:
+    weight: 700
+    family: "Open Sans Condensed", HelveticaNeue-CondensedBold, Helvetica, sans-serif
+
+.container
+  width: 92%
+  max-width: 1440/$em
+  margin: 0 auto
+
+header
+  padding: 20/$em 0
+  overflow: hidden
+
+h1
+  float: left
+  padding-right: 4/$em
+  span.title
+    display: none
+    font:
+      size: 38/$em
+  img.title-img
+    width: 172/$em
+    height: 50/$em
+    vertical-align: bottom
+
+
+span.beta
+  display: block
+  float: left
+  margin-top: 20/$em
+  height: 15/$em
+  span.value
+    font:
+      size: 14/$em
+      weight: bold
+    color: $orange
+    text-transform: uppercase
+
+
+form.notify-small
+  float: right
+  width: 386/$em
+  @media all and (max-width: 740px)
+    display: none
+
+input.email
+  padding: 6/$em 16/$em
+  float: left
+  border: 2/$em solid #CCC
+  font:
+    weight: 300
+    family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
+
+div.beta-opt-in
+  float: left
+
+input.beta
+  float: left
+  background: none
+  border: none
+
+label.beta
+  display: block
+  float: left
+  line-height: 10/$em
+  color: #555
+  span.value
+    font-size: 10/$em
+
+button.submit
+  cursor: pointer
+  padding: 8/$em 22/$em
+  float: right
+  font-weight: bold
+  background-color: $orange
+  border: none
+  color: #fff
+  opacity: 0.9
+  &:hover
+    opacity: 1
+  span.title
+    font-size: 18/$em
+
+div#main
+  height: 100%
+
+div.showcase
+  overflow: hidden
+  background-color: #083b4d
+
+p.slogan
+  color: #FFF
+  font-weight: 300
+  margin-top: 30/$em
+  text-align: center
+  line-height: 38/$em
+  span.value
+    font-size: 38/$em
+  @media all and (max-width: 690px)
+    line-height: 28/$em
+    span.value
+      font-size: 28/$em
+
+img.example-display
+  display: block
+  margin: 30/$em auto 0
+  max-width: 960/$em
+  @media all and (max-width: 960px)
+    width: 90%
+
+
+div.features-section
+  clear: both
+
+
+
+ul.features
+  list-style-type: none
+  overflow: hidden
+
+li.feature
+  margin: 40/$em 5% 40/$em 0
+  width: 30%
+  float: left
+
+  @media all and (min-width: 767px)
+    &:nth-child(3n)
+      margin-right: 0
+
+  @media all and (min-width: 481px) and (max-width: 767px)
+    width: 47.5%
+    &:nth-child(2n)
+      margin-right: 0
+
+  @media all and (max-width: 480px)
+    width: 100%
+    margin: 20/$em 5% 20/$em 0
+
+  div.heading
+    margin: 0 0 10/$em 0
+    padding: 0 10/$em 10/$em 0
+    height: 48/$em
+    border-bottom: 1/$em solid #555
+    overflow: hidden
+
+    @media all and (min-width: 481px) and (max-width: 980px)
+      height: 72/$em
+
+  h5.title
+    float: right
+    text-align: right
+    width: 70%
+
+  img.icon
+    display: block
+    float: left
+    height: 48/$em
+    width: 48/$em
+
+  p.description
+    font-size: 14/$em
+
+  a.blog
+    color: $orange
+    font-weight: bold
+
+div.coming-soon
+  margin: 0 0 40/$em 0
+
+h2
+  text-align: center
+  margin: 40/$em auto 12/$em
+  line-height: 28/$em
+  span.title
+    font:
+      family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
+      weight: 300
+      size: 28/$em
+  em.owned
+    font-style: none
+    text-decoration: underline
+
+h4
+  text-align: center
+  margin: 10/$em auto
+  span.title
+    font:
+      family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
+      weight: 300
+      size: 16/$em
+
+form.notify-big
+  width: 700/$em
+  margin: 20/$em auto 20/$em
+  overflow: hidden
+  @media all and (max-width: 690px)
+    width: 100%
+
+  input.email
+    float: left
+    border: 1/$em solid #CCC
+    padding: 6/$em 16/$em
+    width: 240/$em
+    font:
+      size: 125%
+      weight: 300
+      family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
+    @media all and (max-width: 690px)
+      display: block
+      float: none
+      margin: 0 auto
+      width: 80%
+
+  div.beta-opt-in
+    overflow: hidden
+    float: left
+    font-size: 150%
+    margin-left: 20/$em
+    @media all and (max-width: 690px)
+      float: none
+      margin: 0 auto
+      width: 100/$em
+      padding: 12/$em 32/$em
+
+  input.beta
+    height: 40/$em
+    margin-right: 14/$em
+
+  label.beta
+    display: block
+    float: left
+    line-height: 10/$em
+    color: #555
+
+  button.submit
+    font:
+      size: 20/$em
+    @media all and (max-width: 690px)
+      float: none
+      display: block
+      margin: 0 auto
+
+div.blog-cta
+  background-color: #083b4d
+
+  h4.blog
+    line-height: 200%
+    padding: 80/$em 0
+    span.title
+      color: #FFF
+      font:
+        size: 28/$em
+
+a.blog, a.twitter-name
+  text-decoration: none
+  color: $orange
+  &:hover
+    text-decoration: underline

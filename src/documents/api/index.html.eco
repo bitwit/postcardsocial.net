@@ -1,0 +1,50 @@
+---
+layout: 'default'
+title: 'API'
+---
+
+<h1>API</h1>
+
+<% collection = @getCollection('documents').sortArray('relativeBase':1) %>
+
+<div class="well">
+    <ul class="nav nav-list">
+        <li class="nav-header"><a href="#markups">API Calls</a></li>
+        <% for document in collection: %>
+        <% if document.url.indexOf('/api/endpoints') == 0: %>
+        <% title = document.relativeBase.replace("api/endpoints/","") %>
+        <li>
+            <a href="#<%= document.slug %>"><%= title %></a>
+        </li>
+        <% end %>
+        <% end %>
+    </ul>
+</div>
+
+
+<% for document in collection: %>
+<% if document.url.indexOf('/api/endpoints') == 0: %>
+<% title = document.relativeBase.replace("api/endpoints/","") %>
+<h3 id="<%= document.slug %>">
+    <%= title %>
+</h3>
+<div class="well">
+    <dl>
+        <dt>Method</dt>
+        <dd><%= document.method || "?" %></dd>
+
+        <% if document.required:%>
+        <dt>Required Fields</dt>
+        <dd><%= document.required %></dd>
+        <% end %>
+
+        <% if document.optional:%>
+        <dt>Optional Fields</dt>
+        <dd><%= document.optional || "N/A" %></dd>
+        <% end %>
+    </dl>
+    <h4>Description</h4>
+    <%- document.contentRendered %>
+</div>
+<% end %>
+<% end %>
