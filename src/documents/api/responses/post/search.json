@@ -1,0 +1,16 @@
+{
+    "success": true,
+    "payload": [
+        {
+            "id": 1234,
+            "message": "Sending out an SOS",
+            "date": "0000-00-00 00:00:00",
+            "permalink": "http://"
+        }, {
+            "id": 4321,
+            "message": "Message in a postcard",
+            "date": "0000-00-00 00:00:00",
+            "permalink": "http://"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+---
+layout: 'main'
+title: 'Blog'
+---
+
+div.container
+	h2
+		span.title Blog
+	- var collection = getCollection('posts').sortArray({'relativeBase':1})
+	ul
+		- for (var i=0; i<collection.length;i++)
+				- var document = collection[i]
+					- if (document.relativeBase.indexOf("index") == -1) //avoid listing this index
+						li
+							h3
+								a(href="#{document.url}")=document.title
+							div.post-meta
+								span.date
+									a(href="http://blog.postcardsocial.net/what-if-email-had-never-been-standardized/", title="Permalink to What if email had never been standardized?")
+										time.entry-date(datetime=document.date)=document.date
+								span.tags=document.tags
+								span.author=document.author
+							p=document.description

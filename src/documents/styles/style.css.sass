@@ -1,5 +1,4 @@
 @import 'compass'
-@import 'compass/reset'
 
 $font-size: 16   // Your base font-size in pixels
 $em: $font-size/1em   // Shorthand for outputting ems
@@ -18,11 +17,15 @@ body
 
 h1,h2,h3,h4,h5,h6
   font:
+    size: $font-size * 1px
     weight: 700
-    family: "Open Sans Condensed", HelveticaNeue-CondensedBold, Helvetica, sans-serif
+    family: "Open Sans", "Helvetiva Neue", Helvetica, sans-serif
+
+h2
+  margin: 20/$em 0
 
 .container
-  width: 92%
+  width: 86%
   max-width: 1440/$em
   margin: 0 auto
 
@@ -42,6 +45,18 @@ h1
     height: 50/$em
     vertical-align: bottom
 
+nav
+  float: left
+  margin: 16/$em 0 0 40/$em
+  ul
+    list-style-type: none
+  li
+    float: left
+    margin-right: 40/$em
+    &:last-child
+      margin-right: 0
+    a
+      font-size: 24/$em
 
 span.beta
   display: block
@@ -131,11 +146,11 @@ img.example-display
 div.features-section
   clear: both
 
-
-
 ul.features
   list-style-type: none
   overflow: hidden
+  padding: 0
+  margin: 0
 
 li.feature
   margin: 40/$em 5% 40/$em 0
@@ -146,29 +161,35 @@ li.feature
     &:nth-child(3n)
       margin-right: 0
 
-  @media all and (min-width: 481px) and (max-width: 767px)
+  @media all and (min-width: 451px) and (max-width: 767px)
     width: 47.5%
     &:nth-child(2n)
       margin-right: 0
 
-  @media all and (max-width: 480px)
+  @media all and (max-width: 450px)
     width: 100%
-    margin: 20/$em 5% 20/$em 0
+    margin: 20/$em 0 20/$em 0
 
   div.heading
-    margin: 0 0 10/$em 0
+    margin: 0 0 20/$em 0
     padding: 0 10/$em 10/$em 0
-    height: 48/$em
+    height: 54/$em
     border-bottom: 1/$em solid #555
-    overflow: hidden
+    overflow: visible
 
-    @media all and (min-width: 481px) and (max-width: 980px)
-      height: 72/$em
+    @media all and (min-width: 451px) and (max-width: 970px)
+      height: 80/$em
 
   h5.title
     float: right
     text-align: right
     width: 70%
+    margin: 0 auto
+    span.value
+      font:
+        family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
+        weight: 400
+        size: 16/$em
 
   img.icon
     display: block
@@ -177,7 +198,11 @@ li.feature
     width: 48/$em
 
   p.description
-    font-size: 14/$em
+    margin: 0
+    line-height: 150%
+    font:
+      size: 16/$em
+      family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
 
   a.blog
     color: $orange
@@ -186,7 +211,7 @@ li.feature
 div.coming-soon
   margin: 0 0 40/$em 0
 
-h2
+h2.coming-soon
   text-align: center
   margin: 40/$em auto 12/$em
   line-height: 28/$em
@@ -199,13 +224,13 @@ h2
     font-style: none
     text-decoration: underline
 
-h4
+h4.signup, h4.blog
   text-align: center
-  margin: 10/$em auto
+  margin: 0 auto
   span.title
     font:
       family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
-      weight: 300
+      weight: 700
       size: 16/$em
 
 form.notify-big
@@ -269,9 +294,67 @@ div.blog-cta
       color: #FFF
       font:
         size: 28/$em
+        weight: 400
 
 a.blog, a.twitter-name
   text-decoration: none
   color: $orange
   &:hover
     text-decoration: underline
+
+//footer
+
+footer
+  margin: 0
+  padding: 20/$em
+  background-color: #222
+  color: #FFF
+  font-size: 16/$em
+
+h5.footer-title
+  margin: 10/$em 0 20/$em
+  span.title
+    font:
+      family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
+      weight: 400
+      size: 28/$em
+
+ul.footer-nav
+  list-style-type: none
+  padding: 0
+  margin: 0
+  li.nav-item
+    margin: 0 0 10/$em 0
+    font-size: 24/$em
+
+span.copyright, span.github-mention
+  float: right
+  clear: both
+  margin-top: 5/$em
+
+//API
+
+div.api-listing
+  position: fixed
+  top: 80/$em
+  left: 7%
+
+div.api-endpoints-container
+  float: right
+  margin-top: 90/$em
+  max-width: 70%
+
+div.api-index
+  h4.api-endpoint
+    clear: both
+    margin: 0 0 20/$em 0
+
+code.json
+  span.value
+    color: #333333
+  span.attribute
+    color: #00aa00
+  span.string
+    color: #0e90d2
+  span.literal
+    color: #c67605

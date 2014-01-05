@@ -1,0 +1,7 @@
+{
+    "success": true,
+    "payload": {
+        "token": "ABCDEFGHIJKLMNOP"
+    },
+    "message": "Successfully authenticated"
+}

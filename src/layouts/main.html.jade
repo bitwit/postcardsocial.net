@@ -1,0 +1,75 @@
+- var mailchip_list_url = 'http://postcardsocial.us7.list-manage.com/subscribe/post?u=0867e80f604fbb2b5fc62c88e&amp;id=5c51005cbc';
+
+!!!
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		title=getPreparedTitle()
+
+		meta(name='description', content='#{getPreparedDescription()}')
+		meta(name='keywords', content='#{getPreparedKeywords()}')
+		meta(name='author', content='#{getPreparedAuthor()}')
+
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		meta(property="og:type", content="website")
+		meta(property="og:url", content="http://www.postcardsocial.net/")
+		meta(property="og:site_name", content="Postcard")
+		meta(property="og:image", content="http://www.postcardsocial.net/img/postcard-icon.png")
+		meta(property="og:title", content="Postcard - A social networking platform for your website")
+		meta(property="og:description", content="Postcard is about helping you seamlessly get content on your own website as well as social networks if you don't have time to do long-form blogging.")
+
+		link(rel='stylesheet', href='/vendor/bootstrap.min.css')
+		link(rel='stylesheet', href='/styles/style.css')
+		link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800',rel='stylesheet',type='text/css')
+
+		!= getBlock('scripts').toHTML()
+
+	body
+		header
+			div.container
+				h1
+					a(href="/")
+						span.title Postcard
+						img.title-img(src="/images/icon-logo.png")
+
+				nav
+					ul
+						li
+							a(href="/") Home
+						li
+							a(href="/api/") API
+						li
+							a(href="/posts/") Blog
+
+		section#content.content!=content
+
+		footer
+			div.container
+				h5.footer-title
+					span.title Postcard
+				ul.footer-nav
+					li.nav-item
+						a(href="/") Home
+					li.nav-item
+						a(href="/api/") API
+					li.nav-item
+						a(href="/posts/") Blog
+
+				span.copyright &copy; Kyle Newsome 2014
+				span.github-mention
+					| This website is open source and
+					a(href="https://github.com/bitwit/postcardsocial.net") &nbsp;available on GitHub
+
+		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
+		script.
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-11047565-14']);
+			_gaq.push(['_setDomainName', 'postcardsocial.net']);
+			_gaq.push(['_setAllowLinker', true]);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();

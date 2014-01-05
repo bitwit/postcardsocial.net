@@ -1,0 +1,49 @@
+---
+layout: 'main'
+title: 'API'
+---
+
+div.container.api-index
+
+	- var collection = getCollection('documents').sortArray({'relativeBase':1})
+
+	div.api-listing
+		h2
+			span.title API Documentation - v1
+		div.well
+			ul.nav.nav-list
+				li.nav-header
+					a(href="#markups") API Calls
+					- for(var i=0;i<collection.length;i++) //document in collection
+						- var document = collection[i]
+						- if (document.url.indexOf('/api/endpoints') == 0)
+							- var title = document.relativeBase.replace("api/endpoints/","")
+							li
+								a(href="##{document.slug}") /#{title}
+
+	div.api-endpoints-container
+		- for(var i=0;i<collection.length;i++) //document in collection
+			- var document = collection[i]
+			- var slug = document.slug
+			- var responseSlug = slug.replace("endpoints","responses")
+			- var response = getFile({'slug': responseSlug})
+			- if (document.url.indexOf('/api/endpoints') == 0)
+				- var title = document.relativeBase.replace("api/endpoints/","")
+				h4.api-endpoint(id="#{document.slug}")
+					span.title /#{title}
+				div.well
+					dl
+						dt Method
+						dd=(document.method || "?")
+						- if(document.required)
+							dt Required Fields
+							dd=document.required.join(", ")
+						- if(document.optional)
+							dt Optional Fields</dt>
+							dd=document.optional.join(", ")
+					h5
+						span.title Description
+					p!=document.contentRendered
+					- if(response)
+						pre
+							code=response.attributes.content

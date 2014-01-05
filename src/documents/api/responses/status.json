@@ -1,0 +1,7 @@
+{
+    "success": true,
+    "payload": {
+        "title": "My example postcard server"
+    },
+    "message": "Server is online"
+}
