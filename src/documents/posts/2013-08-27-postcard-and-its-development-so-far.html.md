@@ -43,15 +43,16 @@ stored the content in Dropbox. For a long time I thought this was an ultimate so
 privacy. However, this summer when I finally got around to taking my idea up again and pushing toward the finish line
 I encountered a few key issues:
 
-Postcard felt like it was at the whim of a 3rd party. If Dropbox changed the rules about how their
+* Postcard felt like it was at the whim of a 3rd party. If Dropbox changed the rules about how their
 folder structures worked, I was up the creek without a paddle. While their API support team is tremendously
 friendly and helpful, some of the answers to my tougher, more specific questions took weeks to arrive which left me
 time to think about the dependency I had on them.
-I hadn't really identified a proper target market. If you'd asked me I probably would have said
+* I hadn't really identified a proper target market. If you'd asked me I probably would have said
 ‘Anyone who uses social media' but that's really not good enough nor did it address any major pain points
 being solved for users.
-I realized I wasn't really using my own project yet either. I was accumulating content in Dropbox, sure, but I had
+* I realized I wasn't really using my own project yet either. I was accumulating content in Dropbox, sure, but I had
 yet to hatch a solution for getting it on to my website in any organized or automated fashion.
+
 While waiting for some answers from Dropbox, I decided to take time and focus on a secondary idea I'd had of making
 the app also communicate with WordPress websites. Using WordPress as a means of storage was a more self-reliant
 solution and also solved the problem of getting my content on a website finally. As I developed the plugin over the

@@ -1,41 +1,74 @@
 @import 'compass'
 
-$font-size: 16   // Your base font-size in pixels
-$em: $font-size/1em   // Shorthand for outputting ems
+$font-size: 16
+// Your base font-size in pixels
+$em: $font-size/1em
+// Shorthand for outputting ems
 
 +establish-baseline($font-size * 1px)
 
 $orange: #FF9628
+$blue: #0e90d2
 
 html
   height: 100%
 
 body
+  margin: 0
   height: 100%
   font:
     family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
 
-h1,h2,h3,h4,h5,h6
+h1, h2, h3, h4, h5, h6
   font:
     size: $font-size * 1px
     weight: 700
     family: "Open Sans", "Helvetiva Neue", Helvetica, sans-serif
 
 h2
-  margin: 20/$em 0
+  margin: 20/$em auto
+  line-height: 32/$em
+  span.title
+    font:
+      family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
+      weight: 400
+      size: 28/$em
+
+h3
+  margin: 0 auto 16/$em
+  line-height: 26/$em
+  span.title
+    font:
+      family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
+      weight: 400
+      size: 22/$em
+
+a
+  color: $blue
+  text-decoration: none
+  &:hover, &:active
+    text-decoration: underline
+  &:visited
+    text-decoration: $orange
 
 .container
-  width: 86%
+  width: 90%
   max-width: 1440/$em
   margin: 0 auto
+  &.thin
+    width: 50%
+    @media all and (max-width: 569px)
+      width: 80%
 
 header
-  padding: 20/$em 0
   overflow: hidden
+  border-bottom: 1/$em solid #cdcdcd
+  padding: 20/$em 0
 
 h1
   float: left
   padding-right: 4/$em
+  margin: 0
   span.title
     display: none
     font:
@@ -46,10 +79,13 @@ h1
     vertical-align: bottom
 
 nav
-  float: left
-  margin: 16/$em 0 0 40/$em
+  float: right
+  width: 70%
+  margin: 16/$em 0 7/$em
   ul
     list-style-type: none
+    margin: 0
+    padding: 0
   li
     float: left
     margin-right: 40/$em
@@ -69,7 +105,6 @@ span.beta
       weight: bold
     color: $orange
     text-transform: uppercase
-
 
 form.notify-small
   float: right
@@ -142,7 +177,6 @@ img.example-display
   @media all and (max-width: 960px)
     width: 90%
 
-
 div.features-section
   clear: both
 
@@ -213,13 +247,7 @@ div.coming-soon
 
 h2.coming-soon
   text-align: center
-  margin: 40/$em auto 12/$em
-  line-height: 28/$em
-  span.title
-    font:
-      family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif
-      weight: 300
-      size: 28/$em
+  margin: 20/$em auto 12/$em
   em.owned
     font-style: none
     text-decoration: underline
@@ -305,8 +333,12 @@ a.blog, a.twitter-name
 //footer
 
 footer
+  overflow: hidden
+  position: relative
+  z-index: 10
+  //above fixed position header/menu
   margin: 0
-  padding: 20/$em
+  padding: 20/$em 0
   background-color: #222
   color: #FFF
   font-size: 16/$em
@@ -332,22 +364,95 @@ span.copyright, span.github-mention
   clear: both
   margin-top: 5/$em
 
+//WordPress Plugin
+
+div.plugin-info-container
+  float: right
+  margin-top: 41/$em
+  width: 70%
+  @media all and (max-width: 860px)
+    float: none
+    max-width: 100%
+    margin-top: 0
+
+
 //API
 
-div.api-listing
-  position: fixed
-  top: 80/$em
-  left: 7%
-
-div.api-endpoints-container
-  float: right
-  margin-top: 90/$em
-  max-width: 70%
+body.api-index, body.wordpress-plugin-index
+  h1
+    position: fixed
+    @media all and (max-width: 860px)
+      position: relative
 
 div.api-index
+  overflow: hidden
   h4.api-endpoint
     clear: both
     margin: 0 0 20/$em 0
+    span.title
+      font-size: 20/$em
+
+div.api-listing
+  position: fixed
+  top: 100/$em
+  left: 5%
+  @media all and (max-width: 860px)
+    position: relative
+    top: 0
+    left: 0
+
+ul.nav-list
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+li.nav-header
+  font-weight: 700
+
+li.nav-section
+  font-size: 14/$em
+
+div.api-introduction
+  margin-bottom: 40/$em
+
+div.api-endpoints-container
+  float: right
+  margin-top: 41/$em
+  max-width: 70%
+  @media all and (max-width: 860px)
+    float: none
+    max-width: 100%
+    margin-top: 0
+
+div.well
+  padding: 19/$em
+  min-height: 20/$em
+  margin-bottom: 20/$em
+  background-color: #f5f5f5
+  border: 1/$em solid #eee
+  border: 1/$em solid rgba(0, 0, 0, .05)
+  +border-radius(4/$em)
+//
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
+
+dl.api-definition
+  margin: 0
+
+  dt
+    margin: 0 0 10/$em
+    span.title
+      text-decoration: underline
+      font:
+        size: 18/$em
+        weight: 400
+
+  dd
+    margin: 0 0 10/$em
+
+pre
+  overflow: scroll
 
 code.json
   span.value
@@ -358,3 +463,49 @@ code.json
     color: #0e90d2
   span.literal
     color: #c67605
+
+//Blog
+
+div.post
+  margin: 0 auto 40/$em
+  h2
+    margin-bottom: 12/$em
+  li
+    margin-bottom: 12/$em
+
+div.post-content
+  font-size: 17/$em
+  line-height: 160%
+
+ul.posts-listing
+  list-style-type: none
+  margin: 0 0 40/$em
+  padding: 0
+
+li.post-listing
+  &:first-child
+    h3.post-title
+      margin-top: 0
+
+h3.post-title
+  margin: 30/$em 0 6/$em
+  font-weight: 400
+  line-height: 30/$em
+  a.title
+    font-size: 22/$em
+
+dl.post-meta
+  margin: 0 0 10/$em
+  overflow: hidden
+  font-size: 14/$em
+  dt
+    font-weight: 700
+    float: left
+    clear: both
+    margin-right: 6/$em
+  dd
+    float: left
+    margin: 0
+
+p.excerpt
+  clear: both

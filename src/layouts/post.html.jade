@@ -2,17 +2,22 @@
 layout: 'main'
 ---
 
-div#post.post.container
+div.container
 	h2
-		span.title!=document.title
-	div.post-meta
-		dt.date Date
-		dd.date
-			a(href="http://blog.postcardsocial.net/what-if-email-had-never-been-standardized/", title="Permalink to What if email had never been standardized?")
-				- console.log(document.date.toString('d'))
+		span.title Blog
+div#post.post
+	div.container.thin
+		h2
+			span.title!=document.title
+		dl.post-meta
+			dt
+				span.title Published on
+			dd.date
 				time.entry-date(datetime=document.date)=document.date
-		dt.tags Tags
-		dd.tags=document.tags
-		dt.author Author
-		dd.author=document.author
-	p!=content
+			dt
+				span.title Tags
+			dd.tags=document.tags
+			dt
+				span.title Written by
+			dd.author=document.author
+		div.post-content!=content

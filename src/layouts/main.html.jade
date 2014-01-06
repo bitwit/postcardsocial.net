@@ -1,5 +1,3 @@
-- var mailchip_list_url = 'http://postcardsocial.us7.list-manage.com/subscribe/post?u=0867e80f604fbb2b5fc62c88e&amp;id=5c51005cbc';
-
 !!!
 html
 	head
@@ -19,13 +17,13 @@ html
 		meta(property="og:title", content="Postcard - A social networking platform for your website")
 		meta(property="og:description", content="Postcard is about helping you seamlessly get content on your own website as well as social networks if you don't have time to do long-form blogging.")
 
-		link(rel='stylesheet', href='/vendor/bootstrap.min.css')
+		//link(rel='stylesheet', href='/vendor/bootstrap.min.css')
 		link(rel='stylesheet', href='/styles/style.css')
 		link(href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800',rel='stylesheet',type='text/css')
 
 		!= getBlock('scripts').toHTML()
 
-	body
+	body(class="#{document.slug}")
 		header
 			div.container
 				h1
@@ -37,6 +35,8 @@ html
 					ul
 						li
 							a(href="/") Home
+						li
+							a(href="/wordpress-plugin/") WordPress Plugin
 						li
 							a(href="/api/") API
 						li
@@ -51,6 +51,8 @@ html
 				ul.footer-nav
 					li.nav-item
 						a(href="/") Home
+					li.nav-item
+						a(href="/wordpress-plugin/") WordPress Plugin
 					li.nav-item
 						a(href="/api/") API
 					li.nav-item

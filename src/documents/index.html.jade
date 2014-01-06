@@ -1,7 +1,6 @@
 ---
 layout: 'main'
 ---
-
 - var features = [];
 - features.push({icon:"icon-thumb.png", title:"Short on time and putting all your effort into social media?", description:"Postcard is about helping you seamlessly get content on your own website as well as social networks if you don't have time to do long-form blogging."});
 - features.push({icon:"icon-phone-networks.png", title:"Always posting updates from your mobile phone?", description:"Postcard is built for a companion mobile app integrated with all major social networks.<br /><br />Post once and send content everywhere."});
@@ -36,7 +35,7 @@ div.coming-soon
 			em.owned owned by you
 	h4.signup
 		span.title Sign up to be notified when Postcard is released
-	form.notify-big(name="mc-embedded-subscribe-form", action="#{mailchip_list_url}", method="POST")
+	form.notify-big(name="mc-embedded-subscribe-form", action="#{site.mailchimpListUrl}", method="POST")
 		input.email(type="email", name="EMAIL", placeholder="your@email.com")
 		div.beta-opt-in
 			input.beta(type="checkbox", value="yes", name="BETA")

@@ -31,6 +31,8 @@ docpadConfig = {
 
       author: "Kyle Newsome"
 
+      mailchimpListUrl: "http://postcardsocial.us7.list-manage.com/subscribe/post?u=0867e80f604fbb2b5fc62c88e&amp;id=5c51005cbc"
+
     # Styles
       styles: [
         "/styles/style.css"

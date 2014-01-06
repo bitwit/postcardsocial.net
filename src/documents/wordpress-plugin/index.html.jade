@@ -1,0 +1,60 @@
+---
+layout: 'main'
+title: 'WordPress Plugin'
+---
+div.container.api-index
+	- var collection = getCollection('documents').sortArray({'relativeBase':1})
+	div.api-listing
+		h2
+			span.title WordPress Plugin
+		div.well
+			ul.nav.nav-list
+				li.nav-section
+					a(href="#plugin-intro") Introduction
+				li.nav-section
+					a(href="#plugin-installation") Installation
+				li.nav-section
+					a(href="#plugin-usage") Using the plugin
+
+	div.plugin-info-container
+		h3#plugin-intro
+			span.title Introduction
+		p The Postcard Social Networking Plugin for WordPress is designed to be compatible with Postcard for iOS. Without the companion app, this plugin won't serve much purpose.
+		| The intention of the Postcard app and plugin is to help users achieve a few key things:
+		ul
+			li Help users that want to post and display social content on their own website without any display restrictions
+			li Help users create fresh content for their website when there isn't time for long-form blogging
+			li Help users that want to own their content by creating sharable permalinks that are attached to messages to networks like Facebook and Twitter
+			li Help users drive traffic to their own websites
+
+		h3#plugin-installation
+			span.title Installation
+		ol
+			li Upload the&nbsp;
+				em postcard-social
+				| &nbsp;folder to the&nbsp;
+				em /wp-content/plugins/
+				| &nbsp;directory
+			li Activate the plugin through the 'Plugins' menu in WordPress
+			li Make sure that you are using a custom permalink structure (or your .htaccess is properly set up to re-route url calls)
+			li Click the 'Postcard' button and confirm that your 'Server API Status' is 'Online'
+			li You are now ready to setup the network up in Postcard on your mobile phone.
+			li In the iOS app - Use the 'API Endpoint' as the website url and enter your username and password to get setup
+			li Now you are ready to post content directly to your own website.
+
+		h3#plugin-usage
+			span.title Using the plugin
+		p Once you are posting content to your website, you can use insert short tags in the post/pages editor to retrieve your content like so:
+		p
+			strong [postcard-archive]&nbsp;
+		|	This shortcode will create a feed of content that is queryable using url (a.k.a. GET) parameters such as ?tags=interesting When you first install Postcard a page is created with this shortcode and used as your permalink url for all future shared content, should you choose to host picture/video content when sharing to other networks
+		p
+			strong [postcard-feed]&nbsp;
+		|	This shortcode will create feed od content that is filterable via attributes such as:
+		div.well
+			strong [postcard-feed tags="interesting,useful"]
+		p
+			strong [postcard-gallery]&nbsp;
+		|	This shortcode will create an image gallery and only display image and video content and is filterable via attributes such as:
+		div.well
+			strong [postcard-gallery count=20]
