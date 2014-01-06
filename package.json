@@ -30,23 +30,23 @@
   },
   "dependencies": {
     "docpad": "6.x",
-    "docpad-plugin-cleanurls": "~",
-    "docpad-plugin-coffeescript": "~",
-    "docpad-plugin-coffeekup": "~",
-    "docpad-plugin-eco": "~",
-    "docpad-plugin-haml": "~",
-    "docpad-plugin-highlightjs": "~",
-    "docpad-plugin-html2coffee": "~",
-    "docpad-plugin-jade": "~",
-    "docpad-plugin-less": "~",
-    "docpad-plugin-marked": "~",
-    "docpad-plugin-nativecomments": "~",
-    "docpad-plugin-partials": "~",
-    "docpad-plugin-stylus": "~",
-    "docpad-plugin-sass": "~"
+    "docpad-plugin-cleanurls": "x",
+    "docpad-plugin-coffeescript": "x",
+    "docpad-plugin-coffeekup": "x",
+    "docpad-plugin-eco": "x",
+    "docpad-plugin-haml": "x",
+    "docpad-plugin-highlightjs": "x",
+    "docpad-plugin-html2coffee": "x",
+    "docpad-plugin-jade": "x",
+    "docpad-plugin-less": "x",
+    "docpad-plugin-marked": "x",
+    "docpad-plugin-nativecomments": "x",
+    "docpad-plugin-partials": "x",
+    "docpad-plugin-stylus": "x",
+    "docpad-plugin-sass": "x"
   },
   "devDependencies": {
-    "docpad-plugin-livereload": "~"
+    "docpad-plugin-livereload": "x"
   },
   "main": "node_modules/docpad/bin/docpad-server"
 }
