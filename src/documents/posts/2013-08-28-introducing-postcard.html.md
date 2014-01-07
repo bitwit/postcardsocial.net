@@ -58,7 +58,7 @@ depend on social media.
 
 Now that Postcard is announced I am collecting information on who is interested. If you haven't already, please [visit
 the homepage][1] and sign up to be notified when Postcard is ready to launch. I also welcome you to check off the
-"Interested in Beta” box and you will hear from me even sooner. My primary goal during the beta period is to be
+"Interested in Beta" box and you will hear from me even sooner. My primary goal during the beta period is to be
 involved in helping the first few people get the WordPress plugin installed and communicating with the iOS app.
 I'm interested in exploring a multitude of use cases and making sure that the plugin fits a broad set of user needs
 from feed/gallery pages to sidebar widgets to embedded shortcodes.

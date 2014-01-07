@@ -31,7 +31,7 @@ While Instagram's slip up wasn't really the biggest of these three events, it wa
 led me to start toying with alternatives. I had been using Instagram at the time
 with [If This Then That][1], a tool for creating trigger events based on your activity
 with various web applications. The particular ‘recipe', as IFTTT calls them,
-was **"If I post to Instagram then automatically store the content in my Dropbox folder”**.
+was **"If I post to Instagram then automatically store the content in my Dropbox folder"**.
 I had set up similar recipes for Twitter, Facebook and App.net at the time too and had a long term vision of storing all
 my posts in Dropbox and then writing a program to amalgamate and display them on my personal website. When Instagram's
 forthcoming policy change was introduced, I decided to take the DIY approach to accomplishing my end goal and started
@@ -72,7 +72,7 @@ space. App.net had it right to take social networking out of the hands of advert
 to put social networking under your control directly. Your content, your server, your customization. Share the message
 anywhere else you want as well; that's your choice.
 
-That about summarizes the ‘raison d'être' for Postcard. I'll be writing in more detail about
+That about summarizes the 'raison d'être' for Postcard. I'll be writing in more detail about
 creative ways it can be used very soon.
 
 [1]: http://ifttt.com/ "If This Then That"
