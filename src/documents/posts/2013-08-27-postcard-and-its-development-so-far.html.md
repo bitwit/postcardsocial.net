@@ -14,7 +14,7 @@ This is a synopsis of the story so far.*
 
 ----
 
-2012 was an interesting year for social media. Three key influential moments stick out in my mind:
+2012 was certainly an interesting year for social media. Three key influential moments stick out in my mind:
 
 1. Twitter announced their version 1.1 API which made some wholesale changes to how tweets were allowed to be displayed
 outside of Twitter and how people could retrieve their content from Twitter. There was some pretty big outrage at the
