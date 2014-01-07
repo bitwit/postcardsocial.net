@@ -134,6 +134,14 @@ docpadConfig = {
       server.use (req, res, next) ->
         if req.headers.host in oldUrls
           res.redirect(newUrl + req.url, 301)
+        else if req.url.indexOf("github-post-receive") != -1
+          sys = require 'sys'
+          exec = require('child_process').exec;
+          exec "git pull origin master",  (error, stdout, stderr) ->
+            console.log stdout
+            if error isnt null
+              console.log 'exec error: ' + error
+          next()
         else
           next()
 }
