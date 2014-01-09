@@ -1,0 +1,90 @@
+---
+layout: 'main'
+title: 'Documentation'
+---
+
+div.container.docs-index
+
+	- var collection = getCollection('documents').sortArray({'relativeBase':1})
+
+	div.docs-listing
+		h2
+			span.title Documentation
+		div.well
+			ul.nav.nav-list
+				li.nav-header
+					a(href="#docs-introduction") Introduction
+				li.nav-section
+					a(href="#docs-intro-what") What is this?
+				li.nav-section
+					a(href="#docs-intro-why") Why use it?
+				li.nav-section
+					a(href="#docs-intro-creating-your-network") Creating your own network
+
+				li.nav-header
+					a(href="#docs-calls") The Postcard API Protocol
+					- for(var i=0;i<collection.length;i++) //document in collection
+						- var document = collection[i]
+						- if (document.url.indexOf('/docs/endpoints') == 0)
+							- var title = document.relativeBase.replace("docs/endpoints/","")
+							li.nav-section
+								a(href="##{document.slug}") /#{title}
+
+	div.docs-endpoints-container
+		div#docs-introduction.docs-introduction
+			h3
+				span.title Introduction
+
+			h4#docs-intro-what
+				span.title What is this?
+			- var what = getFile({'slug': 'docs-what'})
+			!=what.attributes.contentRendered
+
+			h4#docs-intro-why
+				span.title Why use it?
+			- var why = getFile({'slug': 'docs-why'})
+			!=why.attributes.contentRendered
+
+			h4#docs-intro-creating-your-network
+				span.title Creating your own network
+			- var creating = getFile({'slug': 'docs-creating-your-network'})
+			!=creating.attributes.contentRendered
+
+		hr.docs-separator
+
+		h3#docs-calls
+			span.title The Postcard API Protocol
+		- var protocolIntro = getFile({'slug': 'docs-protocol-intro'})
+		!=protocolIntro.attributes.contentRendered
+
+		- for(var i=0;i<collection.length;i++) //document in collection
+			- var document = collection[i]
+			- var slug = document.slug
+			- var responseSlug = slug.replace("endpoints","responses")
+			- var response = getFile({'slug': responseSlug})
+			- if (document.url.indexOf('/docs/endpoints') == 0)
+				- var title = document.relativeBase.replace("docs/endpoints/","")
+				h4.docs-endpoint(id="#{document.slug}")
+					span.title /#{title}
+				div.well
+					dl.docs-definition
+						dt
+							span.title Method
+						dd=(document.method || "?")
+						- if(document.required)
+							dt
+								span.title Required Fields
+							dd=document.required.join(", ")
+						- if(document.optional)
+							dt
+								span.title Optional Fields
+							dd=document.optional.join(", ")
+						dt
+							span.title Description
+						dd!=document.contentRendered
+						- if(response)
+							dt
+								span.title Expected Response Format
+							dd
+								pre
+									code=response.attributes.content

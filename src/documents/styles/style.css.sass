@@ -9,6 +9,7 @@ $em: $font-size/1em
 
 $orange: #FF9628
 $blue: #0e90d2
+$green: #00aa00
 
 html
   height: 100%
@@ -93,6 +94,9 @@ nav
       margin-right: 0
     a
       font-size: 24/$em
+
+section.content
+  overflow: hidden
 
 span.beta
   display: block
@@ -364,35 +368,36 @@ span.copyright, span.github-mention
   clear: both
   margin-top: 5/$em
 
+hr.docs-separator
+  margin: 40/$em 0
+
 //WordPress Plugin
 
 div.plugin-info-container
   float: right
   margin-top: 41/$em
-  width: 70%
+  max-width: 70%
   @media all and (max-width: 860px)
     float: none
     max-width: 100%
     margin-top: 0
 
-
-//API
-
-body.api-index, body.wordpress-plugin-index
+//docs
+body.docs-index, body.wordpress-plugin-index
   h1
     position: fixed
     @media all and (max-width: 860px)
       position: relative
 
-div.api-index
+div.docs-index
   overflow: hidden
-  h4.api-endpoint
+  h4.docs-endpoint
     clear: both
-    margin: 0 0 20/$em 0
+    margin: 80/$em 0 20/$em
     span.title
       font-size: 20/$em
 
-div.api-listing
+div.docs-listing
   position: fixed
   top: 100/$em
   left: 5%
@@ -412,10 +417,10 @@ li.nav-header
 li.nav-section
   font-size: 14/$em
 
-div.api-introduction
+div.docs-introduction
   margin-bottom: 40/$em
 
-div.api-endpoints-container
+div.docs-endpoints-container
   float: right
   margin-top: 41/$em
   max-width: 70%
@@ -437,7 +442,19 @@ div.well
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
 
-dl.api-definition
+a.button
+  display: block
+  background-color: $green
+  +border-radius(4/$em)
+  color: #FFF
+  padding: 4/$em
+  margin-bottom: 10/$em
+  text-align: center
+  &:hover, &:active
+    background-color: $orange
+    text-decoration: none
+
+dl.docs-definition
   margin: 0
 
   dt
@@ -453,19 +470,22 @@ dl.api-definition
 
 pre
   overflow: scroll
+  background-color: #333
+  color: #efefef
+  +border-radius(4/$em)
+  padding: 4/$em
 
 code.json
   span.value
-    color: #333333
+    color: #efefef
   span.attribute
-    color: #00aa00
+    color: $green
   span.string
-    color: #0e90d2
-  span.literal
-    color: #c67605
+    color: $blue
+  span.literal, span.number
+    color: $orange
 
 //Blog
-
 div.post
   margin: 0 auto 40/$em
   h2

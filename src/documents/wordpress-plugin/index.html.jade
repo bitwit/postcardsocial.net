@@ -2,12 +2,13 @@
 layout: 'main'
 title: 'WordPress Plugin'
 ---
-div.container.api-index
+div.container.wordpress-plugin-index
 	- var collection = getCollection('documents').sortArray({'relativeBase':1})
-	div.api-listing
+	div.docs-listing
 		h2
 			span.title WordPress Plugin
 		div.well
+			a.button.download-plugin(target="_blank", href="http://wordpress.org/plugins/postcard-social/") Download the Plugin
 			ul.nav.nav-list
 				li.nav-section
 					a(href="#plugin-intro") Introduction
