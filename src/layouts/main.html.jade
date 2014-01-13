@@ -25,7 +25,7 @@ html
 
 	body(class="#{document.slug}")
 		header
-			div.container
+			div.container#header-menu
 				h1
 					a(href="/")
 						span.title Postcard
@@ -41,6 +41,12 @@ html
 							a(href="/docs/") Documentation
 						li
 							a(href="/posts/") Blog
+
+					a.menu-button.open(href="#header-menu")
+						span.title Menu
+
+					a.menu-button.close(href="#")
+						span.title Close
 
 		section#content.content!=content
 
