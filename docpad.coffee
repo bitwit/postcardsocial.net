@@ -19,7 +19,7 @@ docpadConfig = {
       oldUrls: []
 
     # The default title of our website
-      title: "Postcard - Turn your WordPress website into a private social network or micro-blog"
+      title: "Postcard - Write once, share everywhere."
 
     # The website description (for SEO)
       description: """

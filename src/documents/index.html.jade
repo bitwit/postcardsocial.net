@@ -2,22 +2,32 @@
 layout: 'main'
 ---
 - var features = [];
-- features.push({icon:"icon-phone-networks.png", title:"Always posting status updates from your mobile phone?", description:"Postcard is a mobile app integrated with all major social networks.<br /><br />Write your message once and share it everywhere in seconds."});
-- features.push({icon:"icon-thumb.png", title:"Does social media cannibalize your content creation?", description:"Postcard is about helping you seamlessly get content on your own website as well as social networks."});
-- features.push({icon:"icon-magnifying-glass.png", title:"Losing your best updates in an ocean of tweets?",description:"Share your updates to Postcard and search your content later by any parameter.<br /><br />Create filtered feeds and galleries from your content."});
-
-
-- features.push({icon:"icon-hashtag.png", title:"Don't like bloating your updates with hashtags?", description:"Postcard includes private tagging functionality so you can categorize your content without overwhelming the message."});
-- features.push({icon:"icon-lightning.png", title:"Plugin for WordPress <br />now available", description:"Setup is fast and easy. Just install the plugin, add your website to the app and start posting.<br /><br /> Insert feeds as pages, shortcode embeds or widgets without a single line of code."});
+- features.push({icon:"icon-mobile.png", title:"Always posting from your mobile phone?", description:"Postcard is a mobile app integrated with all major social networks.<br /><br />Write your message once and share it everywhere in seconds."});
+- features.push({icon:"icon-hosting.png", title:"Social media cannibalizing your content creation?", description:"Postcard is about helping you seamlessly get content on your own website as well as social networks."});
+- features.push({icon:"icon-directions.png", title:"Losing your best updates in an ocean of tweets?",description:"Share your updates to Postcard and search your content later by any parameter.<br /><br />Create filtered feeds and galleries from your content."});
+- features.push({icon:"icon-custom.png", title:"Don't like bloating your updates with hashtags?", description:"Postcard includes private tagging functionality so you can categorize your content without overwhelming the message."});
+- features.push({icon:"icon-wordpress.png", title:"Plugin for WordPress<br />now available", description:"Setup is fast and easy. Just install the plugin, add your website to the app and start posting.<br /><br /> Insert feeds as pages, shortcode embeds or widgets without a single line of code."});
 - features.push({icon:"icon-tools.png", title:"Like to get your hands dirty and want all the details?", description:"Postcard implements an open and documented API protocol which means any website that responds can use the app. <a class='blog' target='_blank' href='http://postcardsocial.net/docs/'>Read the docs</a> for more info."});
+- // features: "write once", "hosting/traffic control", "overcome limitations", "custom network", "wordpress plugin", "developer docs"
 
 div.showcase
 	div.container
+		div.display-wrapper
+			div.example-display
+				img.phone-display(src="/images/iphone-display@2x.png")
+				video.video-phone-display(width="320", height="568", preload="auto", autoplay, loop)
+					source(src="/videos/postcard-demo.mp4", type="video/mp4")
 		p.slogan
-			span.value Write once, share everywhere.
+			span.value Write Once,
 				br
-				| Even your own website.
-	img.example-display(src="images/showcase.png")
+				| Share Everywhere.
+				br
+				| Even Your Own Website.
+			br
+			br
+			strong.value Direct your traffic
+
+		a.download-button(href="#") Download on the App Store
 
 div.features-section
 	div.container
@@ -33,31 +43,13 @@ div.features-section
 
 div.coming-soon
 	h2.coming-soon
-		span.title Coming soon to a website&nbsp;
-			em.owned owned by you
+		span.title Coming February 2014
 	h4.signup
 		span.title Sign up to be notified when Postcard is released
 	form.notify-big(name="mc-embedded-subscribe-form", action="#{site.mailchimpListUrl}", method="POST")
 		input.email(type="email", name="EMAIL", placeholder="your@email.com")
-		div.beta-opt-in
-			input.beta(type="checkbox", value="yes", name="BETA")
-			label.beta(for="beta")
-				span.value I'm interested
-					br
-					| in beta testing
 		button.submit
 			span.title Notify Me
 
-div.blog-cta
-	h4.blog
-		span.title
-			a.blog(target="_blank", href="http://blog.postcardsocial.net") Visit the blog
-			| &nbsp;for more info
-			br
-			br
-			| - or -
-			br
-			br
-			| Follow Postcard updates on Twitter
-			br
-			a.twitter-name(target="_blank",href="https://www.twitter.com/postcardsocial") @postcardsocial
+//
+	a.twitter-name(target="_blank",href="https://www.twitter.com/postcardsocial") @postcardsocial
