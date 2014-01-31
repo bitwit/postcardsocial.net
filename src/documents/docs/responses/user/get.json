@@ -1,6 +1,10 @@
 {
     "success": true,
     "payload": {
-        "name": "Joe"
-    }
+        "id": "1",
+        "username": "kylnew",
+        "display_name": "kylnew",
+        "picture": "http://www.website.com/wp-content/uploads/2013/09/2013-09-29-160x160.jpg"
+    },
+    "message": "Postcard user found"
 }

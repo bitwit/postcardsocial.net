@@ -29,18 +29,21 @@ html
 				h1
 					a(href="/")
 						span.title Postcard
-						img.title-img(src="/images/logo-icon.png")
+						- if(document.slug == 'index')
+							img.title-img(src="/images/logo-icon@2x.png")
+						- else
+							img.title-img(src="/images/logo-icon-blue@2x.png")
 
 				nav
-					ul
-						li
-							a(href="/") Home
-						li
-							a(href="/wordpress-plugin/") WordPress Plugin
-						li
-							a(href="/docs/") Documentation
-						li
-							a(href="/posts/") Blog
+					ul.main-nav
+						li.main-nav-item
+							a.value(href="/") Home
+						li.main-nav-item
+							a.value(href="/docs/") Documentation
+						li.main-nav-item
+							a.value(href="/wordpress-plugin/") WordPress Plugin
+						li.main-nav-item
+							a.value(href="/posts/") Blog
 
 					a.menu-button.open(href="#header-menu")
 						span.title Menu
@@ -58,9 +61,9 @@ html
 					li.nav-item
 						a(href="/") Home
 					li.nav-item
-						a(href="/wordpress-plugin/") WordPress Plugin
-					li.nav-item
 						a(href="/docs/") Documentation
+					li.nav-item
+						a(href="/wordpress-plugin/") WordPress Plugin
 					li.nav-item
 						a(href="/posts/") Blog
 

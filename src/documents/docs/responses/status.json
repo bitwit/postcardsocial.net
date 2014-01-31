@@ -1,7 +1,9 @@
 {
     "success": true,
     "payload": {
-        "title": "My example postcard server"
+        "url": "http://www.mywebsite.com",
+        "title": "My awesome custom network",
+        "description": "This network is the coolest"
     },
-    "message": "Server is online"
+    "message": "Welcome to the Postcard API"
 }

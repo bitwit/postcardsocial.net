@@ -1,1 +1,1 @@
-302 Redirect
+302 Redirect http://www.website.com/wp-content/uploads/2013/09/2013-09-29-160x160.jpg

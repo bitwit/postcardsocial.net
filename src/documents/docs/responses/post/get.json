@@ -1,9 +1,21 @@
 {
     "success": true,
     "payload": {
-        "id": 1234,
-        "message": "Sending out an SOS",
-        "date": "0000-00-00 00:00:00",
-        "permalink": "http://"
-    }
+        "id": "157",
+        "user_id": "1",
+        "date": "2014-01-01 08:00:00",
+        "message": "Hello World!",
+        "url": null,
+        "image": null,
+        "video": null,
+        "width": null,
+        "height": null,
+        "user": {
+            "id": "1",
+            "username": "kylnew",
+            "display_name": "kylnew",
+            "picture": "http://www.website.com/wp-content/uploads/2014/01/2014-01-01-160x160.jpg"
+        }
+    },
+    "message": "Success getting postcard"
 }

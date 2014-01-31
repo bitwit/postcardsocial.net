@@ -1,6 +1,15 @@
 {
     "success": true,
     "payload": {
-        "permalink": "http://"
-    }
+        "user_id": "1",
+        "date": "2014-01-01 08:00:00",
+        "message": "Hello World!",
+        "image": "http://www.mywebsite.com/wp-content/uploads/2014/01/screenshot-22.png",
+        "width": 640,
+        "height": 1136,
+        "video": "http://www.mywebsite.com/wp-content/uploads/2014/01/17A5A575-4E67-4A5B-84B8-205E78CFB38E-1375-00000119518D47FB_1.1.mp4",
+        "id": 158,
+        "permalink": "http://www.mywebsite.com?page_id=4&pc_id=158"
+    },
+    "message": "Successfully added postcard"
 }

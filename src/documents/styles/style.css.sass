@@ -12,20 +12,23 @@ $orange-lighter: rgb(240,205,192)
 $blue: #295982
 $blue-semi-trans: rgba(41, 89, 130, 0.46)
 $blue-lighter: #6690b4
-$green: #00aa00
+$green: #7aad65
 
 $breakpoint-tablet-max: 960px
-$breakpoint-mobile-max: 520px
+$breakpoint-mobile-max: 680px
 
 html
   height: 100%
 
 body
-  background-color: $blue
   margin: 0
   height: 100%
   font:
     family: "Helvetica Neue Light", HelveticaNeue-Light, "Helvetica Neue", "Open Sans", Helvetica, sans-serif
+  &.index
+    background-color: $blue
+    a
+      color: #FFF !important
 
 h1, h2, h3, h4, h5, h6
   font:
@@ -52,10 +55,10 @@ h3
       size: 22/$em
 
 a
-  color: #FFF
+  color: $blue-lighter
   text-decoration: none
   &:hover, &:active
-    text-decoration: underline
+    color: $orange
   &:visited
     text-decoration: $orange
 
@@ -66,7 +69,7 @@ a
   position: relative
   &.thin
     width: 50%
-    @media all and (max-width: 569px)
+    @media all and (max-width: $breakpoint-mobile-max)
       width: 80%
 
 header
@@ -87,9 +90,11 @@ h1
       size: 38/$em
   img.title-img
     padding-top: 12/$em
-    width: 172/$em
+    width: 173/$em
     height: 25/$em
     vertical-align: bottom
+    @media screen and (min-width: $breakpoint-mobile-max) and (max-width: $breakpoint-tablet-max)
+      padding-top: 32/$em
 
 div#header-menu
   padding: 20/$em 0
@@ -104,35 +109,44 @@ div#header-menu
       list-style-type: none
       margin: 0
       padding: 0
-    li
+    li.main-nav-item
       float: left
       margin-right: 40/$em
       &:last-child
         margin-right: 0
+      @media screen and (min-width: $breakpoint-mobile-max) and (max-width: $breakpoint-tablet-max)
+        text-align: left
+        margin-right: 10%
+        margin-bottom: 10/$em
+        width: 45%
+        &:nth-child(2n)
+          margin-right: 0
+        &:nth-child(3)
+          clear: both
       a
+        color: $blue
         display: block
         font-size: 24/$em
         text-decoration: none
 
-    @media all and (max-width: 740px)
+    @media all and (max-width: $breakpoint-mobile-max)
       float: none
       clear: both
-      margin: 0
+      margin: 44/$em 0 0 0
       width: 100%
       max-height: 0
       overflow: hidden
-      li
+      li.main-nav-item
         float: none
         margin: 0
         padding: 10/$em 0
         text-indent: 20/$em
         &:hover, &:active, &:focus
-          background-color: $orange
           a
-            color: white
+            color: $blue-lighter
 
   &:target
-    @media all and (max-width: 740px)
+    @media all and (max-width: $breakpoint-mobile-max)
       nav
         height: auto
         max-height: 1000/$em
@@ -142,22 +156,38 @@ div#header-menu
         &.close
           display: block
 
-  a.menu-button
-    display: none
-    text-align: center
-    @media all and (max-width: 740px)
-      position: absolute
-      top: 20/$em
-      right: 0
-      border: 1/$em solid #cdcdcd
-      width: 44/$em
-      height: 44/$em
-      line-height: 44/$em
-      &.open
-        display: block
+a.menu-button
+  display: none
+  text-align: center
+  @media all and (max-width: $breakpoint-mobile-max)
+    position: absolute
+    top: 20/$em
+    right: 0
+    width: 44/$em
+    height: 44/$em
+    line-height: 44/$em
+    text-indent: -9000/$em
+    &.open
+      display: block
+      background: url(/images/icon-menu-closed-blue@2x.png) no-repeat
+      background-size: 100%
+    &.close
+      background: url(/images/icon-menu-opened-blue@2x.png) no-repeat
+      background-size: 100%
 
-    span.title
-      font-size: 14/$em
+  span.title
+    font-size: 14/$em
+
+body.index a.menu-button
+  @media all and (max-width: $breakpoint-mobile-max)
+    &.open
+      display: block
+      background: url(/images/icon-menu-closed@2x.png) no-repeat
+      background-size: 100%
+    &.close
+      background: url(/images/icon-menu-opened@2x.png) no-repeat
+      background-size: 100%
+
 
 span.beta
   display: block
@@ -223,6 +253,8 @@ div.showcase
   margin-bottom: 100/$em
   @media all and (max-width: $breakpoint-tablet-max)
     min-height: 335/$em
+  @media all and (max-width: $breakpoint-tablet-max)
+    min-height: 162/$em
 
 p.slogan
   color: #FFF
@@ -243,11 +275,19 @@ p.slogan
     font-weight: 500
 
   @media all and (max-width: $breakpoint-tablet-max)
+    margin-top: 40/$em
     line-height: 38/$em
     span.value, strong.value
       font-size: 38/$em
 
+  @media all and (max-width: $breakpoint-mobile-max)
+    margin-top: 20/$em
+    line-height: 24/$em
+    span.value, strong.value
+      font-size: 24/$em
+
 a.download-button
+  cursor: default
   display: block
   text:
     indent: -9000/$em
@@ -257,7 +297,10 @@ a.download-button
   margin-top: 40/$em
   width: 270/$em
   height: 160/$em
-  background: url(/images/download-app-store.png) no-repeat
+  background: url(/images/coming-app-store@2x.png) no-repeat
+  background-size: 100%
+  @media all and (max-width: $breakpoint-mobile-max)
+    font-size: 50%
 
 div.display-wrapper
   position: absolute
@@ -269,7 +312,11 @@ div.display-wrapper
   @media all and (max-width: $breakpoint-tablet-max)
     font-size: 50%
     top: -60/$em
-    right: -100/$em
+    right: 0/$em
+  @media all and (max-width: $breakpoint-mobile-max)
+    font-size: 25%
+    top: 0
+    right: 0
 
 div.example-display
   width: 580/$em
@@ -297,6 +344,10 @@ div.features-section
   position: relative
   background-color: $blue-lighter
   padding: 80/$em 0
+  @media all and (max-width: $breakpoint-tablet-max)
+    padding: 60/$em 0
+  @media all and (max-width: $breakpoint-mobile-max)
+    padding: 40/$em 0
 
 ul.features
   list-style-type: none
@@ -309,17 +360,19 @@ li.feature
   width: 30%
   float: left
   color: #FFF
+  min-height: 280/$em
 
-  @media all and (min-width: 767px)
+  @media all and (min-width: $breakpoint-mobile-max)
     &:nth-child(3n)
       margin-right: 0
 
-  @media all and (min-width: 451px) and (max-width: 767px)
+  @media all and (min-width: 451px) and (max-width: $breakpoint-mobile-max)
     width: 47.5%
     &:nth-child(2n)
       margin-right: 0
 
   @media all and (max-width: 450px)
+    min-height: 240/$em
     width: 100%
     margin: 20/$em 0 20/$em 0
 
@@ -327,7 +380,7 @@ li.feature
     margin: 0 0 20/$em 0
     padding: 0 10/$em 10/$em 0
     height: 54/$em
-    border-bottom: 1/$em solid #555
+    border-bottom: 1/$em solid #FFF
     overflow: visible
 
     @media all and (min-width: 451px) and (max-width: 970px)
@@ -351,7 +404,6 @@ li.feature
     width: 48/$em
 
   p.description
-
     margin: 0
     line-height: 150%
     font:
@@ -360,17 +412,25 @@ li.feature
   a.blog
     color: $orange-lighter
     text-decoration: underline
+    &:hover, &:active
+      color: $blue
+    &:visited
+      text-decoration: $orange
 
 div.coming-soon
   background-color: $orange-lighter
   padding: 120/$em 0 160/$em 0
+  @media all and (max-width: $breakpoint-tablet-max)
+    padding: 80/$em 0 100/$em
+  @media all and (max-width: $breakpoint-mobile-max)
+    padding: 60/$em 0 80/$em
 
 h2.coming-soon
   text-align: center
   margin: 0
-  padding: 20/$em 0 12/$em
+  padding: 20/$em 0 6/$em
   font-size: 36/$em
-  color: $orange
+  color: $blue // $orange
   em.owned
     font-style: none
     text-decoration: underline
@@ -400,7 +460,7 @@ form.notify-big
     font:
       size: 125%
       weight: 300
-    @media all and (max-width: 690px)
+    @media all and (max-width: $breakpoint-mobile-max)
       display: block
       float: none
       margin: 0 auto
@@ -410,10 +470,10 @@ form.notify-big
     font:
       weight: normal
       size: 18/$em
-    @media all and (max-width: 690px)
+    @media all and (max-width: $breakpoint-mobile-max)
       float: none
       display: block
-      margin: 0 auto
+      margin: 20/$em auto 0
 
 a.twitter-name
   text-decoration: none
@@ -423,6 +483,7 @@ a.twitter-name
 
 //footer
 footer
+  clear: both
   overflow: hidden
   position: relative
   z-index: 10
@@ -566,7 +627,7 @@ code.json
   span.attribute
     color: $green
   span.string
-    color: $blue
+    color: $blue-lighter
   span.literal, span.number
     color: $orange
 

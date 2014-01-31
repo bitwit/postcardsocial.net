@@ -1,7 +1,7 @@
 {
     "success": true,
     "payload": {
-        "token": "ABCDEFGHIJKLMNOP"
+        "token": "02230cbfbe21618451ba11a77293642e11418ee182a423c1e6ee0ad0c0ce507b"
     },
-    "message": "Successfully authenticated"
+    "message": "successful authentication"
 }

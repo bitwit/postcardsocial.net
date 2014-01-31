@@ -1,4 +1,5 @@
 {
     "success": true,
-    "payload": null
+    "payload": null,
+    "message": "Success deleting postcard"
 }
