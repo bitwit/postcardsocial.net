@@ -429,11 +429,13 @@ h2.coming-soon
   text-align: center
   margin: 0
   padding: 20/$em 0 6/$em
-  font-size: 36/$em
   color: $blue // $orange
-  em.owned
-    font-style: none
-    text-decoration: underline
+  line-height: 225%
+  span.title
+    font-size: 44/$em
+  @media all and (max-width: $breakpoint-mobile-max)
+    span.title
+      font-size: 24/$em
 
 h4.signup
   text-align: center
