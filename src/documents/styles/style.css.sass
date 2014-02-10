@@ -16,13 +16,16 @@ $green: #7aad65
 
 $breakpoint-tablet-max: 960px
 $breakpoint-mobile-max: 680px
+$breakpoint-small-mobile-max: 360px
 
 html
-  height: 100%
+  width: 100%
+  overflow-x: hidden
 
 body
   margin: 0
-  height: 100%
+  width: 100%
+  overflow: hidden
   font:
     family: "Helvetica Neue Light", HelveticaNeue-Light, "Helvetica Neue", "Open Sans", Helvetica, sans-serif
   &.index
@@ -266,7 +269,7 @@ p.slogan
   line-height: 64/$em
   margin-top: 60/$em
   padding-right: 10/$em
-  max-width: 60%
+  max-width: 50%
   span.value, strong.value
     font-size: 56/$em
 
@@ -314,9 +317,13 @@ div.display-wrapper
     top: -60/$em
     right: 0/$em
   @media all and (max-width: $breakpoint-mobile-max)
-    font-size: 25%
-    top: 0
+    //font-size: 25%
+    top: -10/$em
     right: 0
+  @media all and (max-width: $breakpoint-small-mobile-max)
+    //font-size: 25%
+    top: -10/$em
+    right: -20%
 
 div.example-display
   width: 580/$em
