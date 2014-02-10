@@ -1,6 +1,7 @@
 ---
 title: 'add'
 method: 'POST'
+auth: true
 required: ['date','message']
 optional: ['tags','url']
 ---

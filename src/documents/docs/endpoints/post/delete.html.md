@@ -1,6 +1,7 @@
 ---
 title: 'delete'
 method: 'DELETE'
+auth: true
 required: ['id']
 ---
 

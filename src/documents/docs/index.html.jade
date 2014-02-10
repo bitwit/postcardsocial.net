@@ -21,6 +21,10 @@ div.container.docs-index
 
 				li.nav-header
 					a(href="#docs-calls") The Postcard API Protocol
+					li.nav-section
+						a(href="#docs-calls") Overview
+				li.nav-header
+					a(href="#docs-endpoints") API Endpoints
 					- for(var i=0;i<collection.length;i++) //document in collection
 						- var document = collection[i]
 						- if (document.url.indexOf('/docs/endpoints') == 0)
@@ -32,28 +36,32 @@ div.container.docs-index
 		div#docs-introduction.docs-introduction
 			h3
 				span.title Introduction
+			div.indented-content
+				h4#docs-intro-what
+					span.title What is this?
+				- var what = getFile({'slug': 'docs-what'})
+				!=what.attributes.contentRendered
 
-			h4#docs-intro-what
-				span.title What is this?
-			- var what = getFile({'slug': 'docs-what'})
-			!=what.attributes.contentRendered
+				h4#docs-intro-why
+					span.title Why use it?
+				- var why = getFile({'slug': 'docs-why'})
+				!=why.attributes.contentRendered
 
-			h4#docs-intro-why
-				span.title Why use it?
-			- var why = getFile({'slug': 'docs-why'})
-			!=why.attributes.contentRendered
-
-			h4#docs-intro-creating-your-network
-				span.title Creating your own network
-			- var creating = getFile({'slug': 'docs-creating-your-network'})
-			!=creating.attributes.contentRendered
+				h4#docs-intro-creating-your-network
+					span.title Creating your own network
+				- var creating = getFile({'slug': 'docs-creating-your-network'})
+				!=creating.attributes.contentRendered
 
 		hr.docs-separator
 
 		h3#docs-calls
 			span.title The Postcard API Protocol
-		- var protocolIntro = getFile({'slug': 'docs-protocol-intro'})
-		!=protocolIntro.attributes.contentRendered
+		div.indented-content
+			- var protocolIntro = getFile({'slug': 'docs-protocol-intro'})
+			!=protocolIntro.attributes.contentRendered
+
+		h3#docs-endpoints
+			span.title API Endpoints
 
 		- for(var i=0;i<collection.length;i++) //document in collection
 			- var document = collection[i]
@@ -69,6 +77,12 @@ div.container.docs-index
 						dt
 							span.title Method
 						dd=(document.method || "?")
+
+						dt
+							span.title Requires Auth Token?
+						- console.log(document.meta)
+						dd=document.meta.auth ? "Yes" : "No"
+
 						- if(document.required)
 							dt
 								span.title Required Fields

@@ -1,6 +1,7 @@
 ---
 title: 'add_with_media'
 method: 'POST'
+auth: true
 required: ['date','message','image']
 optional: ['tags','url', 'video']
 ---
