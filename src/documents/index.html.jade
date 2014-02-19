@@ -39,15 +39,5 @@ div.features-section
 					p.description!=features[i].description
 			- }
 
-div.coming-soon
-	h2.coming-soon
-		span.title Coming to the App Store<br/>February 19th 2014
-	h4.signup
-		span.title Sign up to be reminded when Postcard is released
-	form.notify-big(name="mc-embedded-subscribe-form", action="#{site.mailchimpListUrl}", method="POST")
-		input.email(type="email", name="EMAIL", placeholder="your@email.com")
-		button.submit
-			span.title Notify Me
-
 //
 	a.twitter-name(target="_blank",href="https://www.twitter.com/postcardsocial") @postcardsocial
