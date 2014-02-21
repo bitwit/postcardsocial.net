@@ -1,7 +1,7 @@
 ---
 layout: 'post'
 title: 'A first week update on upcoming features and fixes'
-date: 2014-02-11 13:00
+date: 2014-02-21 14:00
 author: 'Kyle Newsome'
 tags: ['postcard']
 description: "I wanted to provide a quick update on what's happened to Postcard since launch"
