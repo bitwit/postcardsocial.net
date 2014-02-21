@@ -9,7 +9,7 @@ description: "I wanted to provide a quick update on what's happened to Postcard 
 
 I wanted to provide a quick update on what's happened to Postcard since launch. I've gotten some great feedback in the last
 48 hours or so and am doing my best to fix any issues as soon as possible as well as note feature requests. Feel free to reach
-out to me at postcard@bitwit.ca with anything; I'd love to hear from you and learn how Postcard is helping you.
+out to me at [postcard@bitwit.ca](mailto:postcard@bitwit.ca) with anything; I'd love to hear from you and learn how Postcard is helping you.
 
 That said, let's get to the bottom of what to expect in the first update:
 
