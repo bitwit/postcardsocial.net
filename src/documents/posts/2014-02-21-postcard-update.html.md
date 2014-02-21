@@ -13,7 +13,7 @@ out to me at [postcard@bitwit.ca](mailto:postcard@bitwit.ca) with anything; I'd 
 
 That said, let's get to the bottom of what to expect in the first update:
 
-###Postcard for iOS - Version 1.1
+###Postcard for iOS - Version 1.02
 
 - **Facebook** is getting privacy control for personal feeds. From a holistic perspective, everything has been 'public' to
 me but I understand some users need better privacy control on their personal FB posts. You'll find it in settings
