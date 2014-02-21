@@ -24,8 +24,8 @@ save properly in Version 1.1
 - **Tutorial:** I'm adding a "dismiss" button to the tutorial overlays in case you hit it by accident or just don't have time to read
 it all immediately. It is always redisplayable from the settings(gear) button.
 - **Custom Network(WordPress) Setup:** Some users have reported issues getting their WordPress websites up and running. In all cases so far, it has been because
-people wre missing the `?postcard_api=true` part of the website URL. Version 1.1 is going to do more background checking to
-make sure the URL is correct and add this for you, if necessary
+people were missing the `?postcard_api=true` part of the website URL. Version 1.1 is going to do this for you,
+if necessary, as well as some other URL cleaning so URLs like *"mysite.com"* also work without requiring *"http://"* first
 
 ###Postcard Social Plugin for WordPress - Version 1.2
 As of yesterday night, there is a new version of the WordPress plugin that I highly recommend you update to. Why?
