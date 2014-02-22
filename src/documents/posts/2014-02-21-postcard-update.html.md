@@ -20,11 +20,11 @@ me but I understand some users need better privacy control on their personal FB 
 and it will look like this:
 ![Facebook privacy settings](https://s3.amazonaws.com/postcard-social/facebook-postcard-privacy.jpg)
 - **Settings saving**: If you've been using the Buffer network, you may have noticed issues with your settings not saving. Settings will all
-save properly in Version 1.1
+save properly in Version 1.02
 - **Tutorial:** I'm adding a "dismiss" button to the tutorial overlays in case you hit it by accident or just don't have time to read
 it all immediately. It is always redisplayable from the settings(gear) button.
 - **Custom Network(WordPress) Setup:** Some users have reported issues getting their WordPress websites up and running. In all cases so far, it has been because
-people were missing the `?postcard_api=true` part of the website URL. Version 1.1 is going to do this for you,
+people were missing the `?postcard_api=true` part of the website URL. Version 1.02 is going to do this for you,
 if necessary, as well as some other URL cleaning so URLs like *"mysite.com"* also work without requiring *"http://"* first
 
 ###Postcard Social Plugin for WordPress - Version 1.2
