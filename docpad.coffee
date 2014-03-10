@@ -136,6 +136,8 @@ docpadConfig = {
       server.use (req, res, next) ->
         if req.headers.host in oldUrls
           res.redirect(newUrl + req.url, 301)
+        else if req.url.indexOf("/rss.xml") is -1 and (req.url.indexOf("/feed") != -1 or req.url.indexOf("/rss") != -1)
+          res.redirect("/rss.xml", 301)
         else if req.url.indexOf("github-post-receive") != -1
           sys = require 'sys'
           exec = require('child_process').exec;

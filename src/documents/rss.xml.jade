@@ -1,0 +1,28 @@
+doctype xml
+rss(xmlns:content="http://purl.org/rss/1.0/modules/content/", xmlns:wfw="http://wellformedweb.org/CommentAPI/", xmlns:dc="http://purl.org/dc/elements/1.1/", xmlns:atom="http://www.w3.org/2005/Atom", xmlns:sy="http://purl.org/rss/1.0/modules/syndication/", xmlns:slash="http://purl.org/rss/1.0/modules/slash/", version="2.0")
+	channel
+		title The Postcard socia; networking platform
+		atom:link(href="http://kylnew.com/rss.xml", rel="self", type="application/rss+xml")
+		link http://postcardsocial.net
+		description The Postcard social platform RSS Feed
+		language en-US
+		generator http://docpad.org
+		- var collection = getCollection('posts').sortArray({'date':-1})
+		if collection.length
+			lastBuildDate= new Date(collection[0].date).toUTCString()
+		- for (var i=0; i<collection.length;i++)
+			- var document = collection[i]
+				- if (document.relativeBase.indexOf("index") == -1) //avoid listing this index
+					item
+						title=document.title
+						link=document.url
+						description
+							| <![CDATA[
+							| !{document.description}
+							| ]]>
+						content
+							| <![CDATA[
+							| !{document.contentRendered}
+							| ]]>
+						pubDate= new Date(document.date).toUTCString()
+						guid(isPermaLink='false')=document.url

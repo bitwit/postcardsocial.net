@@ -43,7 +43,7 @@
     "docpad-plugin-nativecomments": "2.1.0",
     "docpad-plugin-partials": "2.8.0",
     "docpad-plugin-sass": "2.7.0",
-    "docpad-plugin-stylus": "2.5.0"
+    "docpad-plugin-stylus": "2.5.0",
   },
   "devDependencies": {
     "docpad-plugin-livereload": "2.5.3"
