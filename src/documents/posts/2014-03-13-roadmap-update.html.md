@@ -70,7 +70,7 @@ Try reaching them here:
     * Click 'Send Feedback'
     * Write a friendly message :)
 - **Pintrest**: [Submit a Request](https://help.pinterest.com/anonymous_requests/new)
-- **Instagram**: Since being bought by Facebook, it appears Instagram has closed all direct support lines. If you know of a way to reach Instagram, please let me know. [Their official response is here.](http://help.instagram.com/447700568611091).
+- **Instagram**: Since being bought by Facebook, it appears Instagram has closed all direct support lines. If you know of a way to reach Instagram, please let me know. [Their official response is here.](http://help.instagram.com/447700568611091)
 Perhaps consider leaving feedback that this response is not helpful and that you don't like the answer.
 
 ###More undisclosed features coming too
