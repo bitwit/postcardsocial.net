@@ -296,12 +296,22 @@ a.download-button
   float: left
   border: none
   margin-top: 40/$em
-  width: 270/$em
-  height: 160/$em
-  background: url(https://s3.amazonaws.com/postcard-social/images/download-app-store.png) no-repeat
-  background-size: 100%
   @media all and (max-width: $breakpoint-mobile-max)
     font-size: 50%
+    clear: both
+    margin-left: 0 !important
+  &.ios
+    width: 270/$em
+    height: 80/$em
+    background: url(https://s3.amazonaws.com/postcard-social/images/download-app-store.png) no-repeat
+    background-size: 100%
+  &.android
+    margin-left: 10/$em
+    margin-bottom: 20/$em
+    width: 240/$em
+    height: 80/$em
+    background: url(https://s3.amazonaws.com/postcard-social/coming-android@2x.png) no-repeat
+    background-size: 100%
 
 div.display-wrapper
   position: absolute

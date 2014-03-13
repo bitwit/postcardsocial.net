@@ -2,17 +2,17 @@
 layout: 'main'
 ---
 - var features = [];
-- features.push({icon:"icon-everywhere@2x.png", title:"Get the message everywhere.", description:"Postcard is a mobile app integrated with all major social networks.<br /><br />Write your message once and share it everywhere in seconds."});
-- features.push({icon:"icon-globe@2x.png", title:"Even send messages to your website.", description:"Don't leave your homepage out in the cold. Send messages to your own website using the Custom Network feature."});
-- features.push({icon:"icon-directions@2x.png", title:"The 'Host' feature directs your traffic.", description:"If you're interested in linking your networks to the content on another social media site, this feature is your answer."});
-- features.push({icon:"icon-hosting@2x.png", title:"Get control of your content.", description:"Hosting gives you the power to choose where your content lives and how it looks without comprimises to message length or media type."});
-- features.push({icon:"icon-tools@2x.png", title:"A developer friendly social media solution", description:"Postcard for iOS is well documented, so any developer can use the app to send messages to their server. <a class='blog' target='_blank' href='http://postcardsocial.net/docs/'>Read the docs</a> for more info."});
-- features.push({icon:"icon-wordpress@2x.png", title:"WordPress Plugin available", description:"Setup is fast and easy. Just install the plugin, add your website to the app and start posting.<br /><br /> Insert feeds as pages, shortcode embeds or widgets without a single line of code."});
+- features.push({icon:"icon-everywhere@2x.png", alt:"Icon of connected global networks", title:"Get the message everywhere.", description:"Postcard is a mobile app integrated with all major social networks.<br /><br />Write your message once and share it everywhere in seconds."});
+- features.push({icon:"icon-globe@2x.png", alt:"Icon of the globe", title:"Even send messages to your website.", description:"Don't leave your homepage out in the cold. Send messages to your own website using the Custom Network feature."});
+- features.push({icon:"icon-directions@2x.png", alt:"Icon of a directional sign", title:"The 'Host' feature directs your traffic.", description:"If you're interested in linking your networks to the content on another social media site, this feature is your answer."});
+- features.push({icon:"icon-hosting@2x.png", alt:"Icon of a house", title:"Get control of your content.", description:"Hosting gives you the power to choose where your content lives and how it looks without comprimises to message length or media type."});
+- features.push({icon:"icon-tools@2x.png", alt:"Icon of a tool set", title:"A developer friendly social media solution", description:"Postcard for iOS is well documented, so any developer can use the app to send messages to their server. <a class='blog' target='_blank' href='http://postcardsocial.net/docs/'>Read the docs</a> for more info."});
+- features.push({icon:"icon-wordpress@2x.png", alt:"WordPress Logo", title:"WordPress Plugin available", description:"Setup is fast and easy. Just install the plugin, add your website to the app and start posting.<br /><br /> Insert feeds as pages, shortcode embeds or widgets without a single line of code."});
 
 - var reviews = [];
-- reviews.push({logo: "techcrunch-logo@2x.png", author: "Sarah Perez", quote: "Postcard gives you that post-by-post control about where and how your message should be shared."});
-- reviews.push({logo: "148apps-logo@2x.png", author: "Jennifer Allen", quote: "[Postcard] takes out all the effort when trying to consolidate one's social profile."});
-- reviews.push({logo: "maclife-logo@2x.png", author: "J.R. Bookwalter", quote: "Postcard is that rare breed of app that truly makes life easier for social networking junkies."});
+- reviews.push({logo: "techcrunch-logo@2x.png", alt:"TechCrunch Logo", author: "Sarah Perez", quote: "Postcard gives you that post-by-post control about where and how your message should be shared."});
+- reviews.push({logo: "148apps-logo@2x.png", alt:"148 Apps Logo", author: "Jennifer Allen", quote: "[Postcard] takes out all the effort when trying to consolidate one's social profile."});
+- reviews.push({logo: "maclife-logo@2x.png", alt:"Mac Life Logo", author: "J.R. Bookwalter", quote: "Postcard is that rare breed of app that truly makes life easier for social networking junkies."});
 
 
 div.showcase
@@ -30,7 +30,8 @@ div.showcase
 			br
 			strong.value Control your content.
 
-		a.download-button(target="_blank", href="https://itunes.apple.com/us/app/postcard-write-once-share/id589678038?ls=1&mt=8") Download on the App Store
+		a.download-button.ios(target="_blank", href="https://itunes.apple.com/us/app/postcard-write-once-share/id589678038?ls=1&mt=8") Download on the App Store
+		a.download-button.android(href="#signup") Coming soon to Android
 
 div.features-section
 	div.container
@@ -38,26 +39,36 @@ div.features-section
 			- for (var i = 0; i < features.length; ++i) {
 				li.feature
 					div.heading
-						img.icon(src="https://s3.amazonaws.com/postcard-social/images/#{features[i].icon}")
+						img.icon(alt="#{features[i].alt}", src="https://s3.amazonaws.com/postcard-social/images/#{features[i].icon}")
 						h5.title
 							span.value!=features[i].title
 					p.description!=features[i].description
 			- }
 
-div.press-response-section
+div.press-response-section#press
 	div.container
 		h3.press-title
-			span.title In the press
+			span.title In the Press
 		ul.reviews
 			- for (var i = 0; i < reviews.length; ++i) {
 				li.review
 					div.logo-wrapper
-						img.press-logo(src="/images/#{reviews[i].logo}")
+						img.press-logo(alt="#{reviews[i].alt}",src="https://s3.amazonaws.com/postcard-social/#{reviews[i].logo}")
 					blockquote.pull-quote
 						span.contents!=reviews[i].quote
 						p.cite
 							cite - #{reviews[i].author}
 			- }
+
+div.coming-soon#signup
+	h2.coming-soon
+		span.title Android and desktop support are on the way
+	h4.signup
+		span.title Sign up to stay posted
+	form.notify-big(name="mc-embedded-subscribe-form", action="#{site.mailchimpListUrl}", method="POST")
+		input.email(type="email", name="EMAIL", placeholder="your@email.com")
+		button.submit
+			span.title Notify Me
 
 //
 	a.twitter-name(target="_blank",href="https://www.twitter.com/postcardsocial") @postcardsocial
