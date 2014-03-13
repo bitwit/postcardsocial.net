@@ -8,7 +8,12 @@ layout: 'main'
 - features.push({icon:"icon-hosting@2x.png", title:"Get control of your content.", description:"Hosting gives you the power to choose where your content lives and how it looks without comprimises to message length or media type."});
 - features.push({icon:"icon-tools@2x.png", title:"A developer friendly social media solution", description:"Postcard for iOS is well documented, so any developer can use the app to send messages to their server. <a class='blog' target='_blank' href='http://postcardsocial.net/docs/'>Read the docs</a> for more info."});
 - features.push({icon:"icon-wordpress@2x.png", title:"WordPress Plugin available", description:"Setup is fast and easy. Just install the plugin, add your website to the app and start posting.<br /><br /> Insert feeds as pages, shortcode embeds or widgets without a single line of code."});
-- // features: "write once", "hosting/traffic control", "overcome limitations", "custom network", "wordpress plugin", "developer docs"
+
+- var reviews = [];
+- reviews.push({logo: "techcrunch-logo@2x.png", author: "Sarah Perez", quote: "Postcard gives you that post-by-post control about where and how your message should be shared."});
+- reviews.push({logo: "148apps-logo@2x.png", author: "Jennifer Allen", quote: "[Postcard] takes out all the effort when trying to consolidate one's social profile."});
+- reviews.push({logo: "maclife-logo@2x.png", author: "JK Bookwalter", quote: "Postcard is that rare breed of app that truly makes life easier for social networking junkies."});
+
 
 div.showcase
 	div.container
@@ -30,13 +35,28 @@ div.showcase
 div.features-section
 	div.container
 		ul.features
-			- for (var i = 0; i < 6; ++i) {
+			- for (var i = 0; i < features.length; ++i) {
 				li.feature
 					div.heading
 						img.icon(src="https://s3.amazonaws.com/postcard-social/images/#{features[i].icon}")
 						h5.title
 							span.value!=features[i].title
 					p.description!=features[i].description
+			- }
+
+div.press-response-section
+	div.container
+		h3.press-title
+			span.title In the press
+		ul.reviews
+			- for (var i = 0; i < reviews.length; ++i) {
+				li.review
+					div.logo-wrapper
+						img.press-logo(src="/images/#{reviews[i].logo}")
+					blockquote.pull-quote
+						span.contents!=reviews[i].quote
+						p.cite
+							cite - #{reviews[i].author}
 			- }
 
 //
