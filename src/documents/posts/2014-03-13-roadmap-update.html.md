@@ -39,6 +39,9 @@ I've heard a number of requests related to better tagging and mentioning.
 From deeper analysis of your recent twitter activity, to Facebook tags to contact book suggestions. It is on the roadmap to
 make these systems more robust but will involve some wholesale changes to the way it analyzes and predicts suggestions as you type.
 
+###Link Image Selection
+Some networks such as Facebook and LinkedIn will give you better opportunity to select the feature image when sharing a link
+
 ##Location
 GPS Location features are intended to make their way into Postcard in the future.
 
