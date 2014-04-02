@@ -1,7 +1,7 @@
 ---
 layout: 'post'
 title: 'The Postcard Roadmap'
-date: 2014-03-13 14:00
+date: 2014-04-02 14:00
 author: 'Kyle Newsome'
 tags: ['postcard']
 description: "Postcard's WordPress plugin updates to Version 1.4"
