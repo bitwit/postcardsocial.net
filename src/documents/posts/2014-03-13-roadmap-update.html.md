@@ -3,7 +3,7 @@ layout: 'post'
 title: 'The Postcard Roadmap'
 date: 2014-03-13 14:00
 author: 'Kyle Newsome'
-tags: ['postcard']
+tags: ['postcard', 'roadmap', 'update']
 description: "An update on some of the latest developments and upcoming plans"
 ---
 

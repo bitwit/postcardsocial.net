@@ -3,7 +3,7 @@ layout: 'post'
 title: 'Postcard is coming to The App Store'
 date: 2014-02-11 13:00
 author: 'Kyle Newsome'
-tags: ['postcard']
+tags: ['postcard', 'launch']
 description: "Postcard will be available worldwide on February 19th"
 ---
 

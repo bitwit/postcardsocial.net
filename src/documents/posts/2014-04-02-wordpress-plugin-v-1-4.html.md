@@ -3,7 +3,7 @@ layout: 'post'
 title: 'WordPress Plugin Version 1.4 Out Today'
 date: 2014-04-02 14:00
 author: 'Kyle Newsome'
-tags: ['postcard']
+tags: ['postcard', 'wordpress', 'plugin']
 description: "Postcard's WordPress plugin updates to Version 1.4"
 ---
 
