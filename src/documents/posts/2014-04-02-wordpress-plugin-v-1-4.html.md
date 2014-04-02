@@ -16,10 +16,10 @@ In Version 1.3 I released a new option to let people automatically create new Wo
 Version 1.4 expands significantly on that idea by offer new levels of customization to how your new content is created.
 
 This includes:
-    - Titles can be the first line of your message
-    - Tags and hashtags can be translated to WordPress categories and tags various ways
-    - Feature image can be set automatically
-    - Instead of a shortcode embed, posts can contain  the message, link and media directly
+- Titles can be the first line of your message
+- Tags and hashtags can be translated to WordPress categories and tags various ways
+- Feature image can be set automatically
+- Instead of a shortcode embed, posts can contain  the message, link and media directly
 
 There have also been a significant number of improvements made to the tagging and filtering system for galleries and feeds. Videos
 will now play better across all browsers and mobile phones as well!
