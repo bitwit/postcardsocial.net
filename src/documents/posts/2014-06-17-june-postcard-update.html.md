@@ -14,13 +14,13 @@ I haven't written much about what's up with Postcard, but I want to keep transpa
 Right now my first order of business is an Android version of the app. It's being built in [Cordova][1] which means
 I'm also working toward making this more cross-platform in general via an HTML approach.
 
-However, the capabilities of a 'web app' alone aren't quite enough for all of Postcard's needs. So I've been opting
+Unfortunately, the capabilities of a 'web app' alone aren't quite enough for all of Postcard's needs. So I've been opting
 to learn and program some of the Android directly in Java, it just takes a bit longer. The result will be worth it.
 
 ### WordPress
 
-Since launch I've worked on and improved the Postcard WordPress plugin several times and I continue to consider
-WordPress an extremely important part of Postcard. I believe that it needs a serious overhaul in the future to become
+Since launch, I've worked on and improved the Postcard WordPress plugin several times and I continue to consider
+WordPress an extremely important part of Postcard. However, I believe that it needs a serious overhaul in the future to become
 something that is most useful to the greatest number of users. In retrospect, I feel that I didn't connect with the
 WordPress community enough before developing and releasing the plugin, and I would like to do that before releasing a
 version 2.0.
