@@ -34,7 +34,7 @@ Which brings me to my next topic...
 I'm excited to say that I currently have the privilege of working on contract with the [Sidekick team][2]. If you aren't
 familiar with Sidekick, it is an incredible WordPress plugin for client education through guided interactive
 audio tutorials. Myself and one other developer are currently tasked with building the 'Composer' part of this
-tool that will allow developers and agencies to build their own guided tutorials for their customizations.
+tool that will allow developers and agencies to build their own guided tutorials for their own WordPress customizations.
 
 Working with the Sidekick team is a fantastic opportunity to work in a startup environment highly involved in the
 WordPress space and I feel the experience will be integral to getting more in touch with the community at large.
@@ -46,6 +46,8 @@ Stay tuned this summer for Sidekick Composer.
 The iOS app is very alive. I've been more focused on the Android version and customer research before implementing
 too many features on a whim. It's still the app I personally user every day to send my messages and a very
 important part of the puzzle. There's more coming.
+
+Thanks, as always, for your support and patience
 
 [1]: http://cordova.apache.org/ "Cordova"
 [2]: http://www.sidekick.pro/ "Sidekick"
